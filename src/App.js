@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import './App.css';
 import SearchIcon from './search.svg';
 import MovieCard from './MovieCard';
+import Footer from './footer';
 // api-key:4991fb1c
 const API_URL ='https://www.omdbapi.com/?apikey=4991fb1c';
 
@@ -23,7 +24,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>MovieLand</h1>
+      <h1>MovieWorld</h1>
 
       <div className="search">
         <input
@@ -37,6 +38,8 @@ const App = () => {
           onClick={() => searchMovies(searchTerm)}
         />
       </div>
+
+      <Footer />
 
       {movies?.length > 0 ? (
         <div className="container">
